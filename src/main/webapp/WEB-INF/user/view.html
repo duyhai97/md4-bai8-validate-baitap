@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns: xmlns:th="http://www.w3.org/1999/xhtml" th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a  th:href="@{/user}">
+        Back to list User
+    </a>
+</p>
+<table>
+    <tr>
+        <td><label>First Name:</label></td>
+        <td><label th:text="${user.firstName}"></label></td>
+    </tr>
+    <tr>
+        <td><label>Last Name:</label></td>
+        <td><label th:text="${user.LastName}"></label></td>
+    </tr>
+    <tr>
+        <td><label>Email:</label></td>
+        <td><label th:text="${user.email}"></label></td>
+    </tr>
+    <tr>
+        <td><label>Phone:</label></td>
+        <td><label th:text="${user.phoneNumber}"></label></td>
+    </tr>
+    <tr>
+        <td><label>Age:</label></td>
+        <td><label th:text="${user.age}"></label></td>
+    </tr>
+</table>
+
+
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

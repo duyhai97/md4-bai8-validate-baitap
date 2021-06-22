@@ -1,5 +1,6 @@
 package service;
 
+import exception.NotfoundException;
 import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import repository.IUserRepository;
@@ -17,8 +18,11 @@ public class UserService implements IUserService{
     }
 
     @Override
-    public User findById(Long id) {
-        return repository.findOne(id);
+    public User findById(Long id) throws NotfoundException{
+        User user = repository.findOne(id);
+        if (user != null) return user;
+        throw new NotfoundException("Khong tim thay");
+
     }
 
     @Override

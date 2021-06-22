@@ -11,11 +11,6 @@
     </a>
 </p>
 
-<!--<div class="notify">-->
-<!--    <div th:if="${success}">-->
-<!--        <span th:text="${success}"></span>-->
-<!--    </div>-->
-<!--</div>-->
 
 <table id = "customers">
     <thead>
@@ -32,7 +27,7 @@
     </thead>
     <tbody>
     <tr th:each="row : ${userList}">
-        <td th:text="${row.getFirstName()()}"></td>
+        <td th:text="${row.getFirstName()}"></td>
         <td th:text="${row.getLastName()}"></td>
         <td th:text="${row.getEmail()}"></td>
         <td th:text="${row.getPhoneNumber()}"></td>
